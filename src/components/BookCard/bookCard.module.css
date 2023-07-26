@@ -1,0 +1,86 @@
+.cardWrapper {
+    width: 100%;
+    max-width: 250px;
+    font-family: "Assistant", sans-serif;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.cardWrapper:hover {
+    cursor: pointer;
+}
+.cardTitle {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    font-family: "Assistant", sans-serif;
+}
+.imagesWrapper {
+    width: 100%;
+    max-height: 300px;
+    margin-bottom: auto;
+}
+.cardImgTop {
+    width: 100%;
+    height: auto;
+}
+.cardAuthor {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+}
+.starRating {
+    width: 100%;
+    max-width: 30px;
+    display: flex;
+    align-items: center;
+    background-color: #d3bcc5;
+    border-radius: 20px;
+    padding: 0px 10px;
+    margin-bottom: 20px;
+}
+.cardImgReview {
+    width: 20px;
+    height: 20px;
+}
+.cardImgReview:hover {
+    cursor: pointer;
+}
+.starRatingComponent {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Assistant", sans-serif;
+}
+.priceWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cardPrice {
+    font-family: "Assistant", sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 41px;
+}
+.cardImgBasket {
+    width: 30px;
+}
+.cardImgBasket:hover {
+    cursor: pointer;
+}
+.notAvailable {
+    opacity: 0.5;
+}
+.notAvailable:hover {
+    cursor: not-allowed;
+}
+.stockText {
+    color: #202020;
+    font-size: 12px;
+    text-align: center;
+    padding: 5px;
+    position: absolute;
+    bottom: 7%;
+    left: 0;
+    width: 100%;
+}

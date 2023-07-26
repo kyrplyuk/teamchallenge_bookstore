@@ -1,0 +1,41 @@
+.searchComponent {
+	max-width: 80rem;
+	width: 100%;
+	padding: 0.5rem 2rem;
+	align-items: center;
+
+	border-radius: 25px;
+	background: var(--accent-color);
+
+	font-family: "Assistant", sans-serif;
+	font-size: 2rem;
+}
+.searchComponentInner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-shrink: 1;
+}
+.searchComponentInner button {
+	max-width: 3.2rem;
+	max-height: 3.2rem;
+	margin-left: 1rem;
+}
+.searchComponentText {
+	width: 100%;
+	font-size: 2rem;
+	background: none;
+	border: none;
+	outline: none;
+	color: var(--main-text-color);
+}
+.searchComponentText::placeholder {
+	color: #d1d1d1;
+	font-size: 2rem;
+}
+.searchIcon {
+	transition: transform 0.1s ease;
+}
+.searchIcon:hover {
+	transform: scale(1.05);
+}

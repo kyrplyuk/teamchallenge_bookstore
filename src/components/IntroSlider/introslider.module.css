@@ -1,0 +1,50 @@
+.introSlider {
+	margin: 2rem 0;
+}
+.introSliderInner {
+	display: flex;
+	justify-content: space-between;
+	padding: 9rem 9rem 6rem;
+	margin: 4rem 0;
+	background-color: var(--accent-color);
+
+	position: relative;
+}
+.introSliderTitle {
+	font-family: "Atma";
+	color: var(--main-bg-color);
+	font-size: 4.8rem;
+}
+.introSliderSubTitle {
+	font-family: "Assistant";
+	color: #fff;
+	font-size: 2.4rem;
+}
+.introSliderImg {
+	position: absolute;
+	right: 9rem;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.introSliderArrowPrev,
+.introSliderArrowNext {
+	width: 5rem;
+	height: 5rem;
+	padding: 0.85rem 1.5rem;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	border-radius: 50%;
+	transition: background-color 0.2s ease;
+}
+.introSliderArrowPrev {
+	left: 2rem;
+}
+.introSliderArrowNext {
+	right: 2rem;
+}
+.introSliderArrowPrev:hover,
+.introSliderArrowNext:hover {
+	background-color: #d3bcc5;
+}

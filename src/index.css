@@ -1,0 +1,79 @@
+@import url(https://fonts.googleapis.com/css?family=Atma:300,regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Assistant:200,300,regular,500,600,700,800);
+
+:root {
+	--main-bg-color: #ffe5b4;
+	--main-text-color: #202020;
+	--accent-color: #b58497;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	font-size: 10px;
+}
+body,
+html {
+	height: 100%;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	font-size: inherit;
+	font-family: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+	line-height: normal;
+}
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+button {
+	background: none;
+	outline: none;
+	border: none;
+}
+button:hover {
+	cursor: pointer;
+}
+ul {
+	padding: 0;
+	list-style: none;
+}
+li {
+	font-size: inherit;
+}
+.container {
+	max-width: 1440px;
+	margin: 0 auto;
+	/* padding-inline: 50px; */
+}
+.App {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.mainContent {
+	flex: 1 1 auto;
+}
+#root {
+	height: 100%;
+}
