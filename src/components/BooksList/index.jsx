@@ -1,4 +1,4 @@
-import styles from './bookstList.module.css'
+import styles from './bookstList.module.scss'
 import BookCard from '../BookCard'
 import React from 'react'
 

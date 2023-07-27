@@ -1,6 +1,5 @@
 import React from 'react'
-
-import styles from './header.module.css'
+import styles from './header.module.scss'
 import SearchComponent from '../SearchComponent'
 import NavCategories from '../NavCategories'
 
