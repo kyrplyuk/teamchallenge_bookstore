@@ -29,3 +29,9 @@
 	color: #ffe5b4;
 	font-weight: 700;
 }
+
+@media screen and (max-width: 480px) {
+	.navCategories {
+		display: none;
+	}
+}

@@ -33,9 +33,10 @@
 }
 .headerLogoText {
 	font-family: "Atma", sans-serif;
-	font-size: 3.2rem;
+	/* font-size: 3.2rem; */
 	line-height: 1;
 	white-space: nowrap;
+	font-size: calc(16px + 16 * ((100vw - 320px) / (1440 - 320)));
 }
 .headerLogoText span {
 	color: var(--accent-color);
