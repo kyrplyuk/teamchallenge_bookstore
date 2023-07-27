@@ -1,57 +1,88 @@
+@use "../../scss/mixins/adaptiveFontSize" as *;
+@use "../../scss/mixins/adaptiveValue" as *;
+@use "../../scss/vars.scss";
+
 .header {
 	padding: 3.5rem 0 0;
-	background-color: var(--main-bg-color);
-	font-size: 2rem;
-	color: var(--main-text-color);
+	background-color: vars.$main-bg-color;
+	color: vars.$main-text-color;
 	font-family: "Assistant", sans-serif;
-}
-.headerInner {
-	display: flex;
-	flex-direction: column;
-	gap: 1.4rem;
-}
-.headerTop {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	gap: 4.5rem;
 
-	padding: 0 5rem;
-}
-.headerLogo {
-	display: flex;
-	align-items: center;
-	gap: 0.5rem;
-	flex-shrink: 0;
+	&Inner {
+		display: flex;
+		flex-direction: column;
+		gap: 1.4rem;
+	}
 
-	user-select: none;
-}
-.headerLogoImg {
-	max-width: 5rem;
-	max-height: 5rem;
-	object-fit: contain;
-}
-.headerLogoText {
-	font-family: "Atma", sans-serif;
-	/* font-size: 3.2rem; */
-	line-height: 1;
-	white-space: nowrap;
-	font-size: calc(16px + 16 * ((100vw - 320px) / (1440 - 320)));
-}
-.headerLogoText span {
-	color: var(--accent-color);
-	font-family: inherit;
-	font-size: inherit;
-}
-.headerItems {
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	gap: 4.5rem;
-	width: 100%;
+	&Top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 4.5rem;
+
+		padding: 0 5rem;
+	}
+
+	&Logo {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		flex-shrink: 0;
+
+		user-select: none;
+
+		&Img {
+			width: 5rem;
+			height: 5rem;
+			object-fit: contain;
+			flex-shrink: 0;
+		}
+		&Text {
+			font-family: "Atma", sans-serif;
+			line-height: 1;
+			white-space: nowrap;
+			font-size: 3.2rem;
+
+			& span {
+				color: vars.$accent-color;
+				font-family: inherit;
+				font-size: inherit;
+			}
+		}
+	}
+	&Item {
+		&First,
+		&Second {
+			display: flex;
+			align-items: center;
+			width: 100%;
+		}
+		&First {
+			justify-content: flex-start;
+			gap: 1.5rem;
+		}
+		&Second {
+			justify-content: flex-end;
+			gap: 4.5rem;
+		}
+	}
+
+	&ShoppingCartBtn {
+		width: 3.5rem;
+		height: 3.5rem;
+	}
 }
 
-.headerShoppingCartBtn {
-	width: 3.5rem;
-	height: 3.5rem;
+@media screen and (max-width: 1440px) {
+	.header {
+		&Logo {
+			&Img {
+				@include adaptiveValue(width, 50, 30);
+				@include adaptiveValue(height, 50, 30);
+			}
+			&Text {
+				@include adaptiveFontSize(32, 16);
+			}
+		}
+	}
 }

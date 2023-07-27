@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './header.module.scss'
 import SearchComponent from '../SearchComponent'
 import NavCategories from '../NavCategories'
+import BurgerMenu from '../BurgerMenu'
 
 const Header = () => {
 	return (
@@ -9,16 +10,19 @@ const Header = () => {
 			<div className='container'>
 				<div className={styles.headerInner}>
 					<div className={styles.headerTop}>
-						<a href='./' className={styles.headerLogo}>
-							<div className={styles.headerLogoImg}>
-								<img src='./assets/img/logo.svg' alt='logo' />
-							</div>
-							<div className={styles.headerLogoText}>
-								Magic of Wor<span>l</span>ds
-							</div>
-						</a>
+						<div className={styles.headerItemFirst}>
+							<BurgerMenu />
+							<a href='./' className={styles.headerLogo}>
+								<div className={styles.headerLogoImg}>
+									<img src='./assets/img/logo.svg' alt='logo' />
+								</div>
+								<div className={styles.headerLogoText}>
+									Magic of Wor<span>l</span>ds
+								</div>
+							</a>
+						</div>
 
-						<div className={styles.headerItems}>
+						<div className={styles.headerItemSecond}>
 							<SearchComponent />
 							<button type='button' className={styles.headerShoppingCartBtn}>
 								<img src='./assets/img/shoppingCart.svg' alt='cart' />
