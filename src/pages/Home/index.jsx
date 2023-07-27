@@ -1,6 +1,6 @@
 import React from 'react'
 import Sidebar from '../../components/Sidebar'
-import styles from './home.module.css'
+import styles from './home.module.scss'
 import { books } from '../../mockData/booksList'
 import BooksList from '../../components/BooksList'
 import IntroSlider from '../../components/IntroSlider'

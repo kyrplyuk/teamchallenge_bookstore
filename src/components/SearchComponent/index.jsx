@@ -1,6 +1,5 @@
 import React from 'react'
-
-import styles from './search.module.css'
+import styles from './search.module.scss'
 
 const onSearch = e => {
 	e.preventDefault()

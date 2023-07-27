@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import styles from './navCategories.module.css'
+import styles from './navCategories.module.scss'
 
 const categories = ['All', 'Category', 'Fiction', 'Education', 'Nature', 'Myths', 'Activities', 'Comics']
 
