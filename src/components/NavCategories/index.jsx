@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styles from './navCategories.module.scss'
 
-const categories = ['All', 'Category', 'Fiction', 'Education', 'Nature', 'Myths', 'Activities', 'Comics']
+const categories = ['All', 'Picture Books', 'Fiction', 'Education', 'Nature', 'Myths', 'Activities', 'Comics']
 
 const NavCategories = () => {
 	const [active, setActive] = useState('All')

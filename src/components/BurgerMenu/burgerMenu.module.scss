@@ -1,0 +1,44 @@
+@import "../../scss/vars.scss";
+
+.burgerBtn {
+  display: none;
+  align-items: center;
+  width: 40px;
+  height: 35px;
+  padding: 5px;
+  position: relative;
+  flex-shrink: 0;
+}
+.burgerBtn::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 30px;
+  height: 2px;
+  background-color: $main-text-color;
+  border-radius: 2px;
+}
+.burgerLine {
+  width: 100%;
+  height: 2px;
+  background-color: $main-text-color;
+  border-radius: 2px;
+}
+
+.burgerBtn::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  width: 30px;
+  height: 2px;
+  background-color: $main-text-color;
+  border-radius: 2px;
+}
+
+@media screen and (max-width: 768px) {
+  .burgerBtn {
+    display: flex;
+  }
+}
