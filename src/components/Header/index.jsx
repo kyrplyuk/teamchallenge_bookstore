@@ -47,7 +47,7 @@ const Header = () => {
 						<div className={styles.headerItemSecond}>
 							<SearchComponent />
 							<button type='button' className={styles.headerShoppingCartBtn}>
-								<img src='./assets/img/shoppingCart.svg' alt='cart' />
+								<img src='./assets/img/shoppingCartEmpty.svg' alt='cart' />
 							</button>
 						</div>
 					</div>
