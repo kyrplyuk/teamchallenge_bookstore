@@ -45,9 +45,14 @@ const NavCategories = () => {
 				<nav className={styles.navCategoriesMobile}>
 					<ul className={styles.navCategoriesMobileList}>
 						{categories.map(item => (
-							<button key={item} className={styles.navCategoriesMobileItem}>
-								{item}
-							</button>
+							<li>
+								<button key={item} className={styles.navCategoriesMobileItem}>
+									{item}
+									<div className={styles.navCategoriesMobileItemArrow}>
+										<img src='./assets/img/arrowBlack.svg' alt='arrow' />
+									</div>
+								</button>
+							</li>
 						))}
 					</ul>
 				</nav>

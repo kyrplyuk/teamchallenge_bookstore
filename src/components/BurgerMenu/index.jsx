@@ -40,9 +40,13 @@ const BurgerMenu = ({ active, setActive }) => {
 							Close
 						</button>
 					</div>
+
 					<div className={styles.burgerMenuContent}>
-						<div className='burgerMenuContentCategories'>
-							<h4 className='burgerMenuContentCategoriesTittle'>Categories</h4>
+						<div className={styles.burgerMenuContentCategories}>
+							<div className={styles.burgerMenuContentCategoriesImg}>
+								<img src='./assets/img/CategoriesIcon.svg' alt='' />
+							</div>
+							<h4 className={styles.burgerMenuContentCategoriesTitle}>Categories</h4>
 						</div>
 						{isDesktop ? <NavCategories /> : <></>}
 					</div>
