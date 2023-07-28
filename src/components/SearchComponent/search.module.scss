@@ -14,35 +14,38 @@
 	font-family: "Assistant", sans-serif;
 	font-size: 2rem;
 	font-size: 2rem;
-}
-.searchComponentInner {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	flex-shrink: 1;
-}
-.searchComponentInner button {
-	max-width: 3.2rem;
-	max-height: 3.2rem;
-	margin-left: 1rem;
-}
-.searchComponentText {
-	width: 100%;
-	font-size: 2rem;
-	background: none;
-	border: none;
-	outline: none;
-	color: vars.$main-text-color;
-}
-.searchComponentText::placeholder {
-	color: #d1d1d1;
-	font-size: 2rem;
-}
-.searchIcon {
-	transition: transform 0.1s ease;
-}
-.searchIcon:hover {
-	transform: scale(1.05);
+
+	&Inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-shrink: 1;
+
+		& button {
+			max-width: 4rem;
+			max-height: 4rem;
+			margin-left: 1rem;
+		}
+	}
+	&Text {
+		width: 100%;
+		font-size: 2rem;
+		background: none;
+		border: none;
+		outline: none;
+		color: vars.$main-text-color;
+
+		&::placeholder {
+			color: #d1d1d1;
+			font-size: 2rem;
+		}
+	}
+	&Icon {
+		transition: transform 0.1s ease;
+		&:hover {
+			transform: scale(1.05);
+		}
+	}
 }
 
 @media screen and (max-width: 1440px) {
@@ -56,6 +59,6 @@
 
 @media screen and (max-width: 768px) {
 	.searchComponent {
-		display: none;
+		margin-top: 2rem;
 	}
 }

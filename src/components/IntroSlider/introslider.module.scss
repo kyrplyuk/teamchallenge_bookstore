@@ -1,3 +1,6 @@
+@use "../../scss/mixins/adaptiveFontSize" as *;
+@use "../../scss/mixins/adaptiveValue" as *;
+
 .introSlider {
 	margin: 2rem 0;
 }
@@ -5,6 +8,7 @@
 	display: flex;
 	justify-content: space-between;
 	padding: 9rem 9rem 6rem;
+
 	margin: 4rem 0;
 	background-color: var(--accent-color);
 
@@ -14,17 +18,20 @@
 	font-family: "Atma";
 	color: var(--main-bg-color);
 	font-size: 4.8rem;
+	@include adaptiveFontSize(48, 16);
 }
 .introSliderSubTitle {
 	font-family: "Assistant";
 	color: #fff;
 	font-size: 2.4rem;
+	@include adaptiveFontSize(24, 13);
 }
 .introSliderImg {
 	position: absolute;
 	right: 9rem;
 	top: 50%;
 	transform: translateY(-50%);
+	width: 50%;
 }
 
 .introSliderArrowPrev,
@@ -47,4 +54,18 @@
 .introSliderArrowPrev:hover,
 .introSliderArrowNext:hover {
 	background-color: #d3bcc5;
+}
+
+@media screen and (max-width: 768px) {
+	.introSliderInner {
+		@include adaptiveValue(padding-left, 90, 20);
+		@include adaptiveValue(padding-right, 90, 20);
+		@include adaptiveValue(padding-top, 90, 20);
+		@include adaptiveValue(padding-bottom, 60, 10);
+	}
+
+	.introSliderArrowNext,
+	.introSliderArrowPrev {
+		display: none;
+	}
 }
