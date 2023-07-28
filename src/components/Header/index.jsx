@@ -1,17 +1,39 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import styles from './header.module.scss'
 import SearchComponent from '../SearchComponent'
 import NavCategories from '../NavCategories'
 import BurgerMenu from '../BurgerMenu'
 
 const Header = () => {
+	const [isDesktop, setIsDesktop] = useState(true)
+	const [menuActive, setMenuActive] = useState(false)
+
+	useEffect(() => {
+		if (window.innerWidth > 767) {
+			setIsDesktop(true)
+		} else {
+			setIsDesktop(false)
+		}
+		const updateMedia = () => {
+			if (window.innerWidth > 767) {
+				setIsDesktop(true)
+			} else {
+				setIsDesktop(false)
+			}
+		}
+		window.addEventListener('resize', updateMedia)
+		return () => window.removeEventListener('resize', updateMedia)
+	}, [])
 	return (
 		<header className={styles.header}>
 			<div className='container'>
 				<div className={styles.headerInner}>
 					<div className={styles.headerTop}>
 						<div className={styles.headerItemFirst}>
-							<BurgerMenu />
+							<button className={styles.headerItemBurger} type='button' onClick={() => setMenuActive(!menuActive)}>
+								<span className={styles.headerItemBurgerLine} />
+							</button>
+							<BurgerMenu active={menuActive} setActive={setMenuActive} />
 							<a href='./' className={styles.headerLogo}>
 								<div className={styles.headerLogoImg}>
 									<img src='./assets/img/logo.svg' alt='logo' />
@@ -29,9 +51,13 @@ const Header = () => {
 							</button>
 						</div>
 					</div>
-					<div className={styles.headerBottom}>
-						<NavCategories />
-					</div>
+					{isDesktop ? (
+						<div className={styles.headerBottom}>
+							<NavCategories />
+						</div>
+					) : (
+						<></>
+					)}
 				</div>
 			</div>
 		</header>

@@ -1,45 +1,43 @@
 @use "../../scss/mixins/adaptiveFontSize" as *;
+@use "../../scss/vars.scss";
 
-.navCategoriesList {
-	display: flex;
-	justify-content: space-between;
-	width: 100%;
-	gap: 1rem;
-}
-.navCategoriesItem,
-.navCategoriesItemActive {
-	max-width: 18rem;
-	width: 100%;
-	padding: 0.45rem 1rem;
-	text-align: center;
-	@include adaptiveFontSize(20, 14);
-	border-radius: 25px 25px 0px 0px;
-
-	transition: all 0.2s ease;
-}
-
-.navCategoriesItemActive {
-	background: var(--accent-color);
-	box-shadow: 0px 0px 10px 0px rgba(32, 32, 32, 0.35) inset;
-	color: #ffe5b4;
-	font-weight: 700;
-}
-.navCategoriesItem:hover {
-	border-radius: 25px 25px 0px 0px;
-	background: var(--accent-color);
-	box-shadow: 0px 0px 10px 0px rgba(32, 32, 32, 0.35) inset;
-	color: #ffe5b4;
-	font-weight: 700;
-}
-.navBurgerBtn {
-	display: none;
-}
-
-@media screen and (max-width: 768px) {
-	.navCategories {
-		display: none;
+.navCategories {
+	&List {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		gap: 1rem;
+		padding-top: 0.4rem;
 	}
-	.navBurgerBtn {
-		display: block;
+
+	&Item,
+	&ItemActive {
+		max-width: 18rem;
+		width: 100%;
+		padding: 1rem;
+		text-align: center;
+		line-height: 1;
+		@include adaptiveFontSize(20, 14);
+		border-radius: 25px 25px 0px 0px;
+		border-radius: 25px 25px 0px 0px;
+
+		transition: all 0.2s ease;
+	}
+	&ItemActive,
+	&Item:hover {
+		background: vars.$accent-color;
+		box-shadow: 0px 0px 10px 0px rgba(32, 32, 32, 0.35) inset;
+		color: #ffe5b4;
+		text-shadow:
+			0 0 1px vars.$main-bg-color,
+			0 0 1px vars.$main-bg-color;
+	}
+
+	&Mobile {
+		&List {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
 	}
 }
