@@ -1,3 +1,7 @@
+@use "../../scss/mixins/adaptiveFontSize" as *;
+@use "../../scss/mixins/adaptiveValue" as *;
+@use "../../scss/vars.scss";
+
 .searchComponent {
 	max-width: 80rem;
 	width: 100%;
@@ -5,9 +9,10 @@
 	align-items: center;
 
 	border-radius: 25px;
-	background: var(--accent-color);
+	background: vars.$accent-color;
 
 	font-family: "Assistant", sans-serif;
+	font-size: 2rem;
 	font-size: 2rem;
 }
 .searchComponentInner {
@@ -27,7 +32,7 @@
 	background: none;
 	border: none;
 	outline: none;
-	color: var(--main-text-color);
+	color: vars.$main-text-color;
 }
 .searchComponentText::placeholder {
 	color: #d1d1d1;
@@ -38,4 +43,19 @@
 }
 .searchIcon:hover {
 	transform: scale(1.05);
+}
+
+@media screen and (max-width: 1440px) {
+	.searchComponent {
+		@include adaptiveFontSize(20, 13);
+	}
+	.searchComponentText::placeholder {
+		@include adaptiveFontSize(20, 13);
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.searchComponent {
+		display: none;
+	}
 }

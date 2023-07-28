@@ -1,5 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Atma:300,regular,500,600,700);
 @import url(https://fonts.googleapis.com/css?family=Assistant:200,300,regular,500,600,700,800);
+@import "./scss/vars.scss";
+// @import "./scss/mixins.scss";
 
 :root {
 	--main-bg-color: #ffe5b4;
@@ -13,6 +15,7 @@
 	margin: 0;
 	padding: 0;
 	font-size: 10px;
+	box-sizing: border-box;
 }
 body,
 html {

@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './introslider.module.css'
+import styles from './introslider.module.scss'
 
 const IntroSlider = () => {
 	return (

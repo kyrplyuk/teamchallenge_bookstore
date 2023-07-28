@@ -1,0 +1,6 @@
+@import "../vars.scss";
+
+@mixin adaptiveValue($property, $startValue, $minValue) {
+  $addValue: $startValue - $minValue;
+  #{$property}: calc(#{$minValue + px} + #{$addValue} * ((100vw - (#{$minScreenWidth + px})) / #{$maxScreenWidth - $minScreenWidth}));
+}

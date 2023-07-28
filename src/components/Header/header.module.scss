@@ -1,0 +1,136 @@
+@use "../../scss/mixins/adaptiveFontSize" as *;
+@use "../../scss/mixins/adaptiveValue" as *;
+@use "../../scss/vars.scss";
+
+.header {
+	padding: 3.5rem 0 0;
+	background-color: vars.$main-bg-color;
+	color: vars.$main-text-color;
+	font-family: "Assistant", sans-serif;
+
+	&Inner {
+		display: flex;
+		flex-direction: column;
+		gap: 1.4rem;
+	}
+
+	&Top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 4.5rem;
+		height: 5rem;
+		padding: 0 5rem 1rem;
+	}
+	&Bottom {
+	}
+
+	&Logo {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		flex-shrink: 0;
+
+		user-select: none;
+
+		&Img {
+			width: 5rem;
+			height: 5rem;
+			object-fit: contain;
+			flex-shrink: 0;
+		}
+		&Text {
+			font-family: "Atma", sans-serif;
+			line-height: 1;
+			white-space: nowrap;
+			font-size: 3.2rem;
+
+			& span {
+				color: vars.$accent-color;
+				font-family: inherit;
+				font-size: inherit;
+			}
+		}
+	}
+	&Item {
+		&First,
+		&Second {
+			display: flex;
+			align-items: center;
+			width: 100%;
+		}
+		&First {
+			justify-content: flex-start;
+			gap: 1.5rem;
+		}
+		&Second {
+			justify-content: flex-end;
+			gap: 4.5rem;
+		}
+		&Burger {
+			display: none;
+			align-items: center;
+			width: 40px;
+			height: 35px;
+			padding: 5px;
+			position: relative;
+			flex-shrink: 0;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 5px;
+				left: 5px;
+				width: 30px;
+				height: 2px;
+				background-color: vars.$main-text-color;
+				border-radius: 2px;
+			}
+			&Line {
+				width: 100%;
+				height: 2px;
+				background-color: vars.$main-text-color;
+				border-radius: 2px;
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: 5px;
+				left: 5px;
+				width: 30px;
+				height: 2px;
+				background-color: vars.$main-text-color;
+				border-radius: 2px;
+			}
+		}
+	}
+
+	&ShoppingCartBtn {
+		width: 3.5rem;
+		height: 3.5rem;
+	}
+}
+
+@media screen and (max-width: 1440px) {
+	.header {
+		&Logo {
+			&Img {
+				@include adaptiveValue(width, 50, 30);
+				@include adaptiveValue(height, 50, 30);
+			}
+			&Text {
+				@include adaptiveFontSize(32, 16);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.header {
+		&Item {
+			&Burger {
+				display: flex;
+			}
+		}
+	}
+}

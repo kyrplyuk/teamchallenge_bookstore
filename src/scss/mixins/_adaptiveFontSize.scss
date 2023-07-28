@@ -1,0 +1,7 @@
+@import "../vars.scss";
+
+@mixin adaptiveFontSize($pcFontSize, $mobileFontSize) {
+  $addSize: $pcFontSize - $mobileFontSize;
+  $maxScreenWidth: $maxScreenWidth - $minScreenWidth;
+  font-size: calc(#{$mobileFontSize + px} + #{$addSize} * ((100vw - #{$minScreenWidth + px}) / #{$maxScreenWidth}));
+}
