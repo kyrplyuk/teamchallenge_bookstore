@@ -1,9 +1,9 @@
 import React from 'react'
-import Sidebar from '../../components/Sidebar'
+// import Sidebar from '../../components/Sidebar'
 import styles from './home.module.scss'
-import { books } from '../../mockData/booksList'
-import BooksList from '../../components/BooksList'
-import IntroSlider from '../../components/IntroSlider'
+// import { books } from '../../mockData/booksList'
+// import BooksList from '../../components/BooksList'
+// import IntroSlider from '../../components/IntroSlider'
 
 const Home = () => {
 	return (
