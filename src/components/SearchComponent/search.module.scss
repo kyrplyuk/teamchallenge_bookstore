@@ -53,3 +53,9 @@
 		@include adaptiveFontSize(20, 13);
 	}
 }
+
+@media screen and (max-width: 768px) {
+	.searchComponent {
+		display: none;
+	}
+}

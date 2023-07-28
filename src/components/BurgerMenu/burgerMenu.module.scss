@@ -7,23 +7,17 @@
   top: 0;
   left: 0;
   margin-left: -5rem;
-
   transform: translateX(-180%);
+  transition: transform 0.4s linear;
 
-  // overflow-x: hidden;
-  transition: transform 0.2s ease;
-  z-index: 1000;
   &Active {
     position: fixed;
     width: 100vw;
     height: 100vh;
     top: 0;
     margin-left: -5rem;
-
     transform: translateX(0);
-
-    overflow-x: hidden;
-    transition: transform 0.2s ease;
+    transition: transform 0.4s ease;
     z-index: 1000;
 
     & .burgerMenuBackdrop {
@@ -40,7 +34,7 @@
     backdrop-filter: blur(2px);
     z-index: 50;
     opacity: 0;
-    transition: all 0.1s ease;
+    transition: all 0.2s ease;
   }
   &Inner {
     width: 80%;
