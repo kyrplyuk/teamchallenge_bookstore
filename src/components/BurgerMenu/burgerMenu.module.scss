@@ -35,6 +35,7 @@
     z-index: 50;
     opacity: 0;
     transition: all 0.2s ease;
+    overflow-y: hidden;
   }
   &Inner {
     width: 80%;
