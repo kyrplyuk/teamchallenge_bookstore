@@ -24,13 +24,25 @@ const Header = () => {
 		window.addEventListener('resize', updateMedia)
 		return () => window.removeEventListener('resize', updateMedia)
 	}, [])
+
+	const rootAddOverflow = () => {
+		const root = document.getElementById('root')
+		root.classList.add('root-overflow')
+	}
 	return (
 		<header className={styles.header}>
 			<div className='container'>
 				<div className={styles.headerInner}>
 					<div className={styles.headerTop}>
 						<div className={styles.headerItemFirst}>
-							<button className={styles.headerItemBurger} type='button' onClick={() => setMenuActive(!menuActive)}>
+							<button
+								className={styles.headerItemBurger}
+								type='button'
+								onClick={() => {
+									setMenuActive(!menuActive)
+									rootAddOverflow()
+								}}
+							>
 								<span className={styles.headerItemBurgerLine} />
 							</button>
 							<BurgerMenu active={menuActive} setActive={setMenuActive} />
@@ -45,9 +57,9 @@ const Header = () => {
 						</div>
 
 						<div className={styles.headerItemSecond}>
-							<SearchComponent />
+							{isDesktop ? <SearchComponent /> : <></>}
 							<button type='button' className={styles.headerShoppingCartBtn}>
-								<img src='./assets/img/shoppingCart.svg' alt='cart' />
+								<img src='./assets/img/shoppingCartEmpty.svg' alt='cart' />
 							</button>
 						</div>
 					</div>
