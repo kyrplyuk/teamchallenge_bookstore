@@ -42,17 +42,26 @@
     height: 100%;
     background-color: #fff;
     transition: all 0.4 ease;
+
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
   &Header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    width: 80%;
     background-color: $main-bg-color;
     height: 8rem;
     padding: 4rem 2rem 1rem;
 
     box-shadow: 0px 4px 4px 0px rgba(32, 32, 32, 0.25);
-
+    z-index: 1000;
     &Logo {
       display: flex;
       align-items: center;
@@ -107,6 +116,7 @@
     }
   }
   &Content {
+    margin-top: 8rem;
     &Categories {
       display: flex;
       align-items: center;
