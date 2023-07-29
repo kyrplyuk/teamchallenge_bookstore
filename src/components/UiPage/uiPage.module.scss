@@ -1,0 +1,200 @@
+.cardMainUnit{
+  margin-top: 37px;
+  width: 100%;
+  display: flex;
+  gap: 70px;
+  .cardImgTop{
+    width: 100%;
+    max-width: 252px;
+    margin-left: 50px;
+  }
+  .cardUnitContainer{
+    width: 100%;
+    .cardTitle{
+      font-family: "Atma", sans-serif;
+      color: #202020;
+      font-size: 48px;
+      font-weight: 400;
+      line-height: 48px;
+    }
+    .cardAuthor{
+      font-family: "Assistant", sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: #999;
+    }
+    .cardPrice{
+      color: #202020;
+      text-align: center;
+      font-family: "Assistant", sans-serif;
+      font-size: 40px;
+      font-weight: 600;
+      display: flex;
+      justify-content: end;
+      margin-right: 250px;
+    }
+    .cardUnitBuy{
+      display: flex;
+      justify-content: space-between;
+      .cardUnitBuyButStar{
+      width: 190px;
+    }
+      .cardUnitBuyBut{
+        width: 20%;
+        border-radius: 25px;
+        margin-right: 150px;
+        background: #B58497;
+        box-shadow: 0px 2px 2px 0px rgba(32, 32, 32, 0.25);
+        display: flex;
+        justify-content: space-around;
+        padding: 5px 20px;
+        &:hover{
+          cursor: pointer;
+        }
+        .cardUnitBuyText{
+          color: #ffffff;
+          text-align: center;
+          font-family: "Assistant", sans-serif;
+          font-size: 20px;
+          font-weight: 400;
+        }
+        .cardUnitBuyButBasket{
+          width: 23px;
+        }
+      }
+    }
+    .cardUnitDescHead{
+      color: #202020;
+      font-family: "Assistant", sans-serif;
+      font-size: 32px;
+      font-weight: 600;
+    }
+    .cardUnitDescText{
+      font-family: "Assistant", sans-serif;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      background: linear-gradient(180deg, #202020 0%, rgba(153, 153, 153, 0.00) 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .cardUnitMore{
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      &:hover{
+        cursor: pointer;
+      }
+      .cardUnitMoreText{
+        color: #202020;
+        text-align: center;
+        font-family: "Assistant", sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        text-decoration-line: underline;
+      }
+    }
+    .cardUnitDetHead{
+      margin-top: 55px;
+      color: #202020;
+      font-family: "Assistant", sans-serif;
+      font-size: 32px;
+      font-weight: 600;
+    }
+    .cardUnitDetBlock{
+      width: 100%;
+      max-width: 665px;
+      .cardUnitDetails{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        .cardUnitDetСategories{
+          color: #202020;
+          font-family: "Assistant", sans-serif;
+          font-size: 20px;
+          font-weight: 400;
+        }
+        .cardUnitDet{
+          color: #999;
+          font-family: "Assistant", sans-serif;
+          font-size: 20px;
+          font-weight: 400;
+        }
+      }
+    }
+    .cardUnitRecommendHead{
+      color: #202020;
+      font-family: "Assistant", sans-serif;
+      font-size: 32px;
+      font-weight: 600;
+      margin-top: 91px;
+    }
+    .cardUnitRecommendCarousel{
+      width: 100%;
+      max-width: 850px;
+      position: relative;
+      .cardUnitRecommendSlider{
+        display: flex;
+        overflow: hidden;
+        transition: transform 0.5s ease;
+        .cardUnitRecommendBookSlide{
+          width: 100%;
+          max-width: 300px;
+          .cardUnitRecommendSlideImg{
+            width: 100%;
+            height: auto;
+          }
+          .cardUnitRecommendSlideTitle{
+            color: #202020;
+            font-family: "Assistant", sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+          }
+          .cardUnitRecommendSlideAuthor{
+            color: #202020;
+            font-family: "Assistant", sans-serif;
+            font-size: 20px;
+            font-weight: 400;
+          }
+          .cardUnitRecommendSlideRating {
+            width: 100%;
+            max-width: 50px;
+            display: flex;
+            align-items: center;
+            background-color: #d3bcc5;
+            border-radius: 20px;
+            padding: 0px 10px;
+            margin-bottom: 20px;
+            .cardUnitRecommendSlideReview {
+              width: 20px;
+              height: 20px;
+            }
+            .cardUnitRecommendSlideComponent {
+              font-size: 16px;
+              font-weight: bold;
+              font-family: "Assistant", sans-serif;
+            }
+          }
+          .cardUnitRecommendSlidePrice{
+            color: #202020;
+            font-family: "Assistant", sans-serif;
+            font-size: 32px;
+            font-weight: 600;
+          }
+        }
+      }
+      .cardUnitRecommendSlideArrowPrev{
+        position: absolute;
+        top: 30%;
+        left: -30px;
+      }
+      .cardUnitRecommendSlideArrowNext{
+        position: absolute;
+        top: 30%;
+        right: -30px;
+      }
+    }
+  }
+}
