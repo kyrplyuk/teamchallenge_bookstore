@@ -1,7 +1,4 @@
-import { hash } from 'bcrypt';
 import {
-  BeforeInsert,
-  BeforeUpdate,
   Column,
   Entity,
   PrimaryGeneratedColumn,
@@ -9,7 +6,7 @@ import {
 } from 'typeorm';
 
 @Entity('books')
-export class UserEntity {
+export class BookEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
@@ -22,11 +19,14 @@ export class UserEntity {
   @Column({ type: 'varchar', unique: true })
   isbn: string;
 
-  @Column({ nullable: true })
+  @Column({ type: 'int', nullable: true })
   price: number;
 
-  @Column({ nullable: true })
+  @Column({ type: 'varchar' })
   image: string;
+
+  @Column({ type: 'varchar' })
+  isInSale: string;
 
   @Column({
     name: 'create_date',
@@ -37,7 +37,5 @@ export class UserEntity {
 
   @UpdateDateColumn({ name: 'update_date' })
   updatedAt: Date;
-
-
 
 }

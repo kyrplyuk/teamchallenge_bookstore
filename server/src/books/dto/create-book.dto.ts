@@ -1,19 +1,32 @@
-import { IsEmail, IsString, Validate } from 'class-validator';
-import { IsEmailUnique } from '../decorators/unique-email.decorator';
-import { IsPassword } from '../decorators/password.decorator';
+import {
+  IsEnum,
+  IsISBN,
+  IsInt,
+  IsNotEmpty,
+  IsString,
+  Min,
+  Validate,
+} from 'class-validator';
+import { IsIsbnUnique } from 'src/users/decorators/unique-isbn.decorator';
+import { BookStatus } from '../constants/ book.status.enum';
 
 export class CreateUserDto {
   @IsString()
-  readonly firstName: string;
+  @IsNotEmpty()
+  readonly name: string;
 
   @IsString()
-  readonly secondName: string;
+  @IsNotEmpty()
+  readonly author: string;
 
-  @IsEmail()
-  @Validate(IsEmailUnique)
-  readonly email: string;
+  @IsISBN()
+  @Validate(IsIsbnUnique)
+  readonly isbn: string;
 
-  @IsString()
-  @IsPassword()
-  readonly password: string;
+  @IsInt()
+  @Min(0)
+  readonly price: number;
+
+  @IsEnum(BookStatus)
+  readonly isInSale: string;
 }
