@@ -7,7 +7,6 @@ import {
 import { BookEntity } from 'src/books/entities/book.entity';
 import { Repository } from 'typeorm';
 
-
 @ValidatorConstraint({
   name: 'IsEmailUnique',
   async: true,

@@ -7,7 +7,7 @@ import {
   Min,
   Validate,
 } from 'class-validator';
-import { IsIsbnUnique } from 'src/users/decorators/unique-isbn.decorator';
+import { IsIsbnUnique } from 'src/books/decorators/unique-isbn.decorator';
 import { BookStatus } from '../constants/ book.status.enum';
 
 export class CreateUserDto {
