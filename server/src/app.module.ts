@@ -7,6 +7,8 @@ import configTypeOrm from './ormconfig';
 import { ConfigModule } from '@nestjs/config';
 import { BooksModule } from './books/books.module';
 import { APP_PIPE } from '@nestjs/core';
+import { OrdersModule } from './orders/orders.module';
+import { CategoriesModule } from './categories/categories.module';
 
 @Module({
   imports: [
@@ -14,6 +16,8 @@ import { APP_PIPE } from '@nestjs/core';
     UsersModule,
     ConfigModule.forRoot(),
     BooksModule,
+    OrdersModule,
+    CategoriesModule,
   ],
   controllers: [AppController],
   providers: [
