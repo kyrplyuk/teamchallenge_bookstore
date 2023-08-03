@@ -12,7 +12,7 @@ export class CategoryEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column({ type: 'enum', enum: CategoryName, default: CategoryName.child })
+  @Column({ type: 'enum', enum: CategoryName, default: CategoryName.indefined })
   status: CategoryName;
 
   @Column({
