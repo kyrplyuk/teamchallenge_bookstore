@@ -9,8 +9,8 @@ const Home = () => {
 	return (
 		<>
 			<div className={styles.mainPage}>
-				<IntroSlider />
-				<div>
+				 <IntroSlider />
+				 <div>
 					<div className='container'>
 						<div className={styles.mainContent}>
 							<Sidebar />

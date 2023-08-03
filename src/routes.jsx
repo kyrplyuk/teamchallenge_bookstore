@@ -7,7 +7,7 @@ const routes = [
 		element: <Home />,
 	},
 	{
-		path: '*',
+		path: '/book',
 		element: <NotFoundPage />,
 	},
 ]
