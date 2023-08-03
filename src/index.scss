@@ -67,7 +67,6 @@ li {
 .container {
 	max-width: 1440px;
 	margin: 0 auto;
-	/* padding-inline: 50px; */
 }
 .App {
 	height: 100%;
@@ -79,4 +78,7 @@ li {
 }
 #root {
 	height: 100%;
+}
+.root-overflow {
+	overflow: hidden;
 }

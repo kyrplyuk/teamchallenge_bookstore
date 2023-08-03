@@ -22,10 +22,20 @@ const BurgerMenu = ({ active, setActive }) => {
 		window.addEventListener('resize', updateMedia)
 		return () => window.removeEventListener('resize', updateMedia)
 	}, [])
+	const rootRemoveOverflow = () => {
+		const root = document.getElementById('root')
+		root.classList.remove('root-overflow')
+	}
 	return (
 		<>
 			<div className={active ? styles.burgerMenuActive : styles.burgerMenu}>
-				<div className={styles.burgerMenuBackdrop} onClick={() => setActive(false)} />
+				<div
+					className={styles.burgerMenuBackdrop}
+					onClick={() => {
+						setActive(false)
+						rootRemoveOverflow()
+					}}
+				/>
 				<div className={styles.burgerMenuInner}>
 					<div className={styles.burgerMenuHeader}>
 						<div className={styles.burgerMenuHeaderLogo}>
@@ -36,15 +46,33 @@ const BurgerMenu = ({ active, setActive }) => {
 								Magic of Wor<span>l</span>ds
 							</div>
 						</div>
-						<button type='button' className={styles.burgerMenuHeaderClose} onClick={() => setActive(false)}>
+						<button
+							type='button'
+							className={styles.burgerMenuHeaderClose}
+							onClick={() => {
+								setActive(false)
+								rootRemoveOverflow()
+							}}
+						>
 							Close
 						</button>
 					</div>
+
 					<div className={styles.burgerMenuContent}>
-						<div className='burgerMenuContentCategories'>
-							<h4 className='burgerMenuContentCategoriesTittle'>Categories</h4>
+						<div className={styles.burgerMenuContentCategories}>
+							<div className={styles.burgerMenuContentCategoriesImg}>
+								<img src='./assets/img/CategoriesIcon.svg' alt='' />
+							</div>
+							<h4 className={styles.burgerMenuContentCategoriesTitle}>Categories</h4>
 						</div>
-						{isDesktop ? <NavCategories /> : <></>}
+						{isDesktop ? (
+							<>
+								<NavCategories />
+								<NavCategories />
+							</>
+						) : (
+							<></>
+						)}
 					</div>
 				</div>
 			</div>

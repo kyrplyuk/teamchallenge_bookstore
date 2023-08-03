@@ -1,3 +1,4 @@
+@use "../../scss/mixins/adaptiveFontSize" as *;
 @import "../../scss/vars.scss";
 
 .burgerMenu {
@@ -8,7 +9,7 @@
   left: 0;
   margin-left: -5rem;
   transform: translateX(-180%);
-  transition: transform 0.4s linear;
+  transition: transform 0.6s ease;
 
   &Active {
     position: fixed;
@@ -17,12 +18,12 @@
     top: 0;
     margin-left: -5rem;
     transform: translateX(0);
-    transition: transform 0.4s ease;
+    transition: transform 0.6s ease;
     z-index: 1000;
 
     & .burgerMenuBackdrop {
       opacity: 1;
-      transition: all 0.4s ease;
+      transition: opacity 0.4s ease;
     }
   }
   &Backdrop {
@@ -30,28 +31,37 @@
     width: 100vw;
     height: 100vh;
     left: 80%;
-    background-color: rgba(32, 32, 32, 0.9);
+    background-color: rgba(32, 32, 32, 0.95);
     backdrop-filter: blur(2px);
     z-index: 50;
     opacity: 0;
-    transition: all 0.2s ease;
+    transition: opacity 0.4s ease;
   }
   &Inner {
     width: 80%;
     height: 100%;
     background-color: #fff;
     transition: all 0.4 ease;
+
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
   &Header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    width: 80%;
     background-color: $main-bg-color;
     height: 8rem;
     padding: 4rem 2rem 1rem;
 
     box-shadow: 0px 4px 4px 0px rgba(32, 32, 32, 0.25);
-
+    z-index: 1000;
     &Logo {
       display: flex;
       align-items: center;
@@ -102,6 +112,29 @@
       }
       &:after {
         transform: rotate(-45deg);
+      }
+    }
+  }
+  &Content {
+    margin-top: 8rem;
+    &Categories {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      height: 100%;
+      padding: 2.5rem 2rem 0px 6rem;
+      user-select: none;
+
+      &Title {
+        font-family: "Atma";
+        font-size: 1.6rem;
+        @include adaptiveFontSize(24, 16);
+        color: $accent-color;
+      }
+      &Img {
+        width: 3rem;
+        height: 3rem;
+        margin-left: -4rem;
       }
     }
   }
