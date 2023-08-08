@@ -1,0 +1,91 @@
+.registrFormBody {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    .registrFormWrap {
+        width: 100%;
+        max-width: 600px;
+        border: 2px solid #ccc;
+        border-radius: 20px;
+        position: relative;
+        .registrFormImg{
+            position: absolute;
+            width: 145px;
+            top: 36%;
+            right: 0;
+            border-radius: 20px;
+        }
+        .registrFormHeader {
+            background-color: #FFE5B4;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+
+            .registrFormHead {
+                width: 100%;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                font-family: "Atma", sans-serif;
+                font-weight: 400;
+                font-size: 48px;
+                line-height: 77.71px;
+                color: #202020;
+            }
+        }
+        .registrFormContent {
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            .registrFormText{
+                color: #202020;
+                font-family: "Assistant", sans-serif;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                a{
+                    color: #89596C;
+                }
+            }
+            .registrFormWrapper{
+                .registrFormText{
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 26.16px;
+                    font-family: "Assistant", sans-serif;
+                    color: #202020;
+                }
+                .registrFormFirstName{
+                    width: 400px;
+                    height: 42px;
+                    border-radius: 7px;
+                    border: 1px solid #999;
+                    font-size: 20px;
+                    padding-left: 15px;
+                }
+            }
+            .registrFormButt{
+                border: 1px solid #B58497;
+                border-radius: 25px;
+                padding: 10px 0px;
+                width: 400px;
+                color: #FFF;
+                text-align: center;
+                font-family: Assistant;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                background-color: #B58497;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
