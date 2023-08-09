@@ -4,7 +4,7 @@ import {
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
-import { CategoryName } from '../constants/ category.name.enum';
+import { CategoryName } from '../configs/ category.name.enum';
 
 
 @Entity('categories')

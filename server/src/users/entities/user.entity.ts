@@ -1,9 +1,11 @@
 import { hash } from 'bcrypt';
+import { OrderEntity } from 'src/orders/entities/ order.entity';
 import {
   BeforeInsert,
   BeforeUpdate,
   Column,
   Entity,
+  OneToMany,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
@@ -42,4 +44,7 @@ export class UserEntity {
       this.password = await hash(this.password, 10);
     }
   }
+
+  @OneToMany(() => OrderEntity, (order) => order.user)
+  orders: OrderEntity[];
 }
