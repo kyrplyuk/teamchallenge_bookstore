@@ -9,6 +9,7 @@ import { BooksModule } from './books/books.module';
 import { APP_PIPE } from '@nestjs/core';
 import { OrdersModule } from './orders/orders.module';
 import { CategoriesModule } from './categories/categories.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { CategoriesModule } from './categories/categories.module';
     BooksModule,
     OrdersModule,
     CategoriesModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [

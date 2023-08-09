@@ -1,13 +1,15 @@
 import {
   Column,
   Entity,
+  ManyToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
-import { OrderStatus } from '../constants/ order.status.enum';
+import { OrderStatus } from '../configs/ order.status.enum';
+import { UserEntity } from 'src/users/entities/user.entity';
 
 @Entity('orders')
-export class BookEntity {
+export class OrderEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -23,4 +25,9 @@ export class BookEntity {
 
   @UpdateDateColumn({ name: 'update_date' })
   updatedAt: Date;
+
+  @ManyToOne(() => UserEntity, (user) => user.orders, {
+    eager: true,
+  })
+  user: UserEntity;
 }
