@@ -54,6 +54,15 @@
                 }
             }
             .registrFormWrapper{
+                .registrFormImage{
+                    position: absolute;
+                    width: 26px;
+                    top:24%;
+                    right: 18%;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
                 .registrFormText{
                     font-weight: 400;
                     font-size: 20px;
@@ -69,6 +78,9 @@
                     font-size: 20px;
                     padding-left: 15px;
                 }
+                .registrFormFirst{
+                    position: relative;
+                }
             }
             .registrFormButt{
                 border: 1px solid #B58497;
@@ -77,7 +89,7 @@
                 width: 400px;
                 color: #FFF;
                 text-align: center;
-                font-family: Assistant;
+                font-family: "Assistant", sans-serif;
                 font-size: 24px;
                 font-style: normal;
                 font-weight: 400;

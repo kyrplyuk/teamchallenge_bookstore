@@ -28,7 +28,8 @@ const RegistrForm = () =>{
                 </div>
                 <div  className={styles.registrFormWrapper}>
                 <label className={styles.registrFormText} htmlFor="password">Password</label>
-                <input className={styles.registrFormFirstName} type="password" id="password" name="password" required placeholder="********"/>
+                <input className={`${styles.registrFormFirstName} ${styles.registrFormFirst}`} type="password" id="password" name="password" required placeholder="********"/>
+                <img className={styles.registrFormImage} src="/assets/img/EyeSlash.svg" alt="eae"/>
                 </div>
                 <button className={styles.registrFormButt} type="submit">Register</button>
                 <p className={styles.registrFormText}>Are you already registered? <a href="№">Log in</a> </p>
