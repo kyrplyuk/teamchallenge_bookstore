@@ -68,7 +68,6 @@ const BurgerMenu = ({ active, setActive }) => {
 						{isDesktop ? (
 							<>
 								<NavCategories />
-								<NavCategories />
 							</>
 						) : (
 							<></>

@@ -31,13 +31,14 @@ const NavCategories = () => {
 				<nav className={styles.navCategories}>
 					<ul className={styles.navCategoriesList}>
 						{categories.map(item => (
-							<button
-								key={item}
-								className={item === active ? styles.navCategoriesItemActive : styles.navCategoriesItem}
-								onClick={() => setActive(item)}
-							>
-								{item}
-							</button>
+							<li key={item}>
+								<button
+									className={item === active ? styles.navCategoriesItemActive : styles.navCategoriesItem}
+									onClick={() => setActive(item)}
+								>
+									{item}
+								</button>
+							</li>
 						))}
 					</ul>
 				</nav>
@@ -45,8 +46,8 @@ const NavCategories = () => {
 				<nav className={styles.navCategoriesMobile}>
 					<ul className={styles.navCategoriesMobileList}>
 						{categories.map(item => (
-							<li>
-								<button key={item} className={styles.navCategoriesMobileItem}>
+							<li key={item}>
+								<button className={styles.navCategoriesMobileItem} onClick={() => setActive(item)}>
 									{item}
 									<div className={styles.navCategoriesMobileItemArrow}>
 										<img src='./assets/img/arrowBlack.svg' alt='arrow' />
