@@ -8,6 +8,11 @@
 		width: 100%;
 		gap: 1rem;
 		padding-top: 0.4rem;
+
+		& li {
+			width: 100%;
+			white-space: nowrap;
+		}
 	}
 
 	&Item,
@@ -43,6 +48,7 @@
 				justify-content: space-between;
 				width: 100%;
 				position: relative;
+				white-space: nowrap;
 			}
 		}
 		&Item {
