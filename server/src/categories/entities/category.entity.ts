@@ -1,11 +1,12 @@
 import {
   Column,
   Entity,
+  OneToMany,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
 import { CategoryName } from '../configs/ category.name.enum';
-
+import { BookEntity } from 'src/books/entities/book.entity';
 
 @Entity('categories')
 export class CategoryEntity {
@@ -24,4 +25,7 @@ export class CategoryEntity {
 
   @UpdateDateColumn({ name: 'update_date' })
   updatedAt: Date;
+
+  @OneToMany(() => BookEntity, (book) => book.category)
+  books: BookEntity[];
 }

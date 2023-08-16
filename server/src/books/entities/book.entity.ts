@@ -1,6 +1,8 @@
+import { CategoryEntity } from 'src/categories/entities/category.entity';
 import {
   Column,
   Entity,
+  ManyToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
@@ -38,4 +40,8 @@ export class BookEntity {
   @UpdateDateColumn({ name: 'update_date' })
   updatedAt: Date;
 
+  @ManyToOne(() => CategoryEntity, (category) => category.books, {
+    eager: true,
+  })
+  category: CategoryEntity;
 }
