@@ -1,0 +1,103 @@
+.formBody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    .formBodyForm{
+        width: 100%;
+        max-width: 600px;
+        border: 2px solid #ccc;
+        border-radius: 20px;
+        position: relative;
+        .formHead{
+            background-color: #FFE5B4;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            .formHeadText{
+                width: 100%;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                font-family: "Atma", sans-serif;
+                font-weight: 400;
+                font-size: 48px;
+                line-height: 77.71px;
+                color: #202020;
+            }
+        }
+        .formWrapp{
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            .formContent{
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 25px;
+                .formText{
+                    color: #202020;
+                    font-family: "Assistant", sans-serif;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    margin-bottom: 5px;
+                }
+                .formName{
+                    max-width: 400px;
+                    height: 42px;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    font-family: "Assistant", sans-serif;
+                    padding-left: 15px;
+                }
+                .formPass{
+                    position: relative;
+                }
+                .formImage{
+                    width: 26px;
+                    position: absolute;
+                    top:13%;
+                    right: 23%;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .formButt{
+            border: 1px solid #B58497;
+            border-radius: 25px;
+            padding: 10px 0px;
+            max-width: 350px;
+            color: #FFF;
+            text-align: center;
+            font-family: "Assistant", sans-serif;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            background-color: #B58497;
+        }
+        .formFutText{
+            font-family: "Assistant", sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            a{
+                font-family: "Assistant", sans-serif;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                text-decoration-line: underline;
+                color: #89596C;
+            }
+        }
+    }
+}
